@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: hm-service
+    name: pay-service
   profiles:
     active: dev
   datasource:
