@@ -1,7 +1,12 @@
 package com.hmall.api.config;
 
+import com.hmall.common.utils.UserContext;
 import feign.Logger;
+import feign.RequestInterceptor;
+import feign.RequestTemplate;
+import org.springframework.boot.autoconfigure.jms.JmsProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.annotation.Order;
 
 /**
  * ClassName: DefaultFeignConfig
@@ -16,5 +21,18 @@ public class DefaultFeignConfig {
     @Bean
     public Logger.Level feignLogLevel(){
         return Logger.Level.FULL;
+    }
+
+    @Bean
+    public RequestInterceptor userinfoRequestInterceptor(){
+        return new RequestInterceptor() {
+            @Override
+            public void apply(RequestTemplate requestTemplate) {
+                Long user = UserContext.getUser();
+                if (user != null) {
+                    requestTemplate.header("user-info", user.toString());
+                }
+            }
+        };
     }
 }
