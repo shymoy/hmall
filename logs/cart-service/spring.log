@@ -1,207 +1,371 @@
-00:02:05:816  INFO 11004 --- [nacos-grpc-client-executor-281] com.alibaba.nacos.common.remote.client   : [4ead1e36-16cb-4866-b224-ed9d94547094_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 16
-00:02:05:819  INFO 11004 --- [nacos-grpc-client-executor-281] com.alibaba.nacos.common.remote.client   : [4ead1e36-16cb-4866-b224-ed9d94547094_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 16
-00:02:06:706  WARN 11004 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service] & group[DEFAULT_GROUP]
-00:02:06:720  WARN 11004 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service-local.yaml] & group[DEFAULT_GROUP]
-00:02:06:722  INFO 11004 --- [nacos.client.cachedata.internal.notifier] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cart-service-local.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-swagger.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-log.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-jdbc.yaml,DEFAULT_GROUP'}]
-00:02:06:732  INFO 11004 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : The following 1 profile is active: "local"
-00:02:06:738  INFO 11004 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : Started application in 0.893 seconds (JVM running for 1260.11)
-00:02:06:808  INFO 11004 --- [nacos.client.cachedata.internal.notifier] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [hm.cart.maxItems]
-00:02:29:896  WARN 11004 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
-00:02:29:896  WARN 11004 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
-00:02:29:900  WARN 11004 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
-00:02:29:900  WARN 11004 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
-00:02:36:529  INFO 22272 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
-00:02:36:928  INFO 22272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-00:02:36:930  INFO 22272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-00:02:36:942  INFO 22272 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
-00:02:37:079  INFO 22272 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6e9530df-4547-3103-ba7a-09dc11ae88b3
-00:02:37:293  INFO 22272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-00:02:37:299  INFO 22272 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-00:02:37:299  INFO 22272 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-00:02:37:374  INFO 22272 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-00:02:37:374  INFO 22272 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 836 ms
-00:02:37:493  INFO 22272 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
-00:02:39:430  INFO 22272 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-00:02:40:104  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 7eba4c06-f480-4d52-8cac-1f09a0ffb858
-00:02:40:104  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] RpcClient init label, labels = {module=naming, source=sdk}
-00:02:40:105  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-00:02:40:106  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-00:02:40:106  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-00:02:40:106  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
-00:02:40:222  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760457764939_192.168.100.1_60657
-00:02:40:222  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-00:02:40:222  INFO 22272 --- [main] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$471/0x0000000840393440
-00:02:40:222  INFO 22272 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Notify connected event to listeners.
-00:02:40:254  INFO 22272 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-00:02:40:263  INFO 22272 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.194.1:8081 register finished
-00:02:40:673  INFO 22272 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-00:02:40:675  INFO 22272 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-00:02:40:690  INFO 22272 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-00:02:40:748  INFO 22272 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 7.158 seconds (JVM running for 8.17)
-00:02:40:752  INFO 22272 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
-00:02:40:753  INFO 22272 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
-00:02:40:753  INFO 22272 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
-00:02:40:801  INFO 22272 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Receive server push request, request = NotifySubscriberRequest, requestId = 21
-00:02:40:803  INFO 22272 --- [nacos-grpc-client-executor-5] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Ack server push request, request = NotifySubscriberRequest, requestId = 21
-00:02:55:859  INFO 22272 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-00:02:55:859  INFO 22272 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-00:02:55:860  INFO 22272 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-00:02:55:934  INFO 22272 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-00:02:56:071  INFO 22272 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-00:02:56:075 DEBUG 22272 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
-00:02:56:088 DEBUG 22272 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 14741770661(Long)
-00:02:56:098 DEBUG 22272 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-00:02:56:100 DEBUG 22272 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
-00:02:56:100 DEBUG 22272 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
-00:02:56:104 DEBUG 22272 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-00:02:56:127 DEBUG 22272 --- [http-nio-8081-exec-1] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
-00:02:56:127 DEBUG 22272 --- [http-nio-8081-exec-1] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 14741770661(Long), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
-00:02:56:134 DEBUG 22272 --- [http-nio-8081-exec-1] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
-00:02:56:175 DEBUG 22272 --- [http-nio-8081-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-00:02:56:176 DEBUG 22272 --- [http-nio-8081-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-00:02:56:180 DEBUG 22272 --- [http-nio-8081-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
-00:02:56:183 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=14741770661 HTTP/1.1
-00:02:56:183 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-00:02:56:183 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (143ms)
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 14 Oct 2025 16:02:56 GMT
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-00:02:56:327 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-00:02:56:328 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-00:02:56:328 DEBUG 22272 --- [http-nio-8081-exec-2] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (370-byte body)
-00:02:56:797  INFO 22272 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Receive server push request, request = NotifySubscriberRequest, requestId = 22
-00:02:56:798  INFO 22272 --- [nacos-grpc-client-executor-10] com.alibaba.nacos.common.remote.client   : [7eba4c06-f480-4d52-8cac-1f09a0ffb858] Ack server push request, request = NotifySubscriberRequest, requestId = 22
-00:03:11:371 DEBUG 22272 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-00:03:11:371 DEBUG 22272 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-00:03:11:372 DEBUG 22272 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
-00:03:11:374 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=14741770661 HTTP/1.1
-00:03:11:374 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-00:03:11:374 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (13ms)
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 14 Oct 2025 16:03:11 GMT
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-00:03:11:387 DEBUG 22272 --- [http-nio-8081-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (370-byte body)
-00:03:16:000 DEBUG 22272 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-00:03:16:001 DEBUG 22272 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-00:03:16:003 DEBUG 22272 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
-00:03:16:003 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=14741770661 HTTP/1.1
-00:03:16:003 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-00:03:16:003 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (6ms)
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 14 Oct 2025 16:03:16 GMT
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-00:03:16:010 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-00:03:16:011 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-00:03:16:011 DEBUG 22272 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (370-byte body)
-00:03:26:809 DEBUG 22272 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
-00:03:26:809 DEBUG 22272 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 40305713537(Long)
-00:03:26:811 DEBUG 22272 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-00:03:26:812 DEBUG 22272 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
-00:03:26:812 DEBUG 22272 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
-00:03:26:813 DEBUG 22272 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-00:03:26:826 ERROR 22272 --- [http-nio-8081-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hmall.common.exception.BizIllegalException: 用户购物车课程不能超过1] with root cause
+15:05:08:796  INFO 41516 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+15:05:09:249 ERROR 41516 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-com.hmall.common.exception.BizIllegalException: 用户购物车课程不能超过1
-	at com.hmall.cart.service.Impl.CartServiceImpl.checkCartsFull(CartServiceImpl.java:121) ~[classes/:na]
-	at com.hmall.cart.service.Impl.CartServiceImpl.addItem2Cart(CartServiceImpl.java:56) ~[classes/:na]
-	at com.hmall.cart.service.Impl.CartServiceImpl$$FastClassBySpringCGLIB$$83d8b6af.invoke(<generated>) ~[classes/:na]
-	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85) ~[spring-aop-5.3.27.jar:5.3.27]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704) ~[spring-aop-5.3.27.jar:5.3.27]
-	at com.hmall.cart.service.Impl.CartServiceImpl$$EnhancerBySpringCGLIB$$bc55b70d.addItem2Cart(<generated>) ~[classes/:na]
-	at com.hmall.cart.controller.CartController.addItem2Cart(CartController.java:28) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
-	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+java.lang.IllegalStateException: Error processing condition on com.hmall.common.config.MyBatisConfig.mybatisPlusInterceptor
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:14) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:246) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:239) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:229) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:182) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:157) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[na:na]
+	... 37 common frames omitted
 
-00:03:57:604  INFO 22272 --- [nacos-grpc-client-executor-32] com.alibaba.nacos.common.remote.client   : [5e681357-8813-4e3f-97b5-9b82e2892f2a_config-0] Receive server push request, request = ConfigChangeNotifyRequest, requestId = 23
-00:03:57:605  INFO 22272 --- [nacos-grpc-client-executor-32] com.alibaba.nacos.common.remote.client   : [5e681357-8813-4e3f-97b5-9b82e2892f2a_config-0] Ack server push request, request = ConfigChangeNotifyRequest, requestId = 23
-00:03:58:355  WARN 22272 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service] & group[DEFAULT_GROUP]
-00:03:58:365  WARN 22272 --- [nacos.client.cachedata.internal.notifier] c.a.c.n.c.NacosPropertySourceBuilder     : Ignore the empty nacos configuration and get it based on dataId[cart-service-local.yaml] & group[DEFAULT_GROUP]
-00:03:58:369  INFO 22272 --- [nacos.client.cachedata.internal.notifier] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-cart-service-local.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-cart-service,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-swagger.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-log.yaml,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shared-jdbc.yaml,DEFAULT_GROUP'}]
-00:03:58:382  INFO 22272 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : The following 1 profile is active: "local"
-00:03:58:397  INFO 22272 --- [nacos.client.cachedata.internal.notifier] o.s.boot.SpringApplication               : Started application in 0.768 seconds (JVM running for 85.819)
-00:03:58:452  INFO 22272 --- [nacos.client.cachedata.internal.notifier] o.s.c.e.event.RefreshEventListener       : Refresh keys changed: [hm.cart.maxItems]
-00:04:00:174 DEBUG 22272 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
-00:04:00:175 DEBUG 22272 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 8533120(Long)
-00:04:00:178 DEBUG 22272 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-00:04:00:179 DEBUG 22272 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
-00:04:00:179 DEBUG 22272 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
-00:04:00:181 DEBUG 22272 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
-00:04:00:182 DEBUG 22272 --- [http-nio-8081-exec-6] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
-00:04:00:182 DEBUG 22272 --- [http-nio-8081-exec-6] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 8533120(Long), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
-00:04:00:188 DEBUG 22272 --- [http-nio-8081-exec-6] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
-00:04:00:220 DEBUG 22272 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
-00:04:00:220 DEBUG 22272 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
-00:04:00:224 DEBUG 22272 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 2
-00:04:00:225 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=14741770661 HTTP/1.1
-00:04:00:225 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
-00:04:00:225 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (15ms)
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Tue, 14 Oct 2025 16:04:00 GMT
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
-00:04:00:242 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
-00:04:00:243 DEBUG 22272 --- [http-nio-8081-exec-10] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (752-byte body)
+15:05:09:251  WARN 41516 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:669) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:661) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1302) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:864) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:852) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:839) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:779) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:14) ~[classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[na:na]
+	... 25 common frames omitted
+
+15:05:09:251  WARN 41516 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:05:09:253  WARN 41516 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:05:09:254  WARN 41516 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:07:27:896  INFO 42160 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+15:07:28:245 ERROR 42160 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on com.hmall.common.config.MyBatisConfig.mybatisPlusInterceptor
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:14) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1737) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:246) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:239) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:229) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:182) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:157) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[na:na]
+	... 37 common frames omitted
+
+15:07:28:246  WARN 42160 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1737) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:669) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:661) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1302) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:864) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:852) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:839) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:779) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.cart.CartApplication.main(CartApplication.java:14) ~[classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[na:na]
+	... 25 common frames omitted
+
+15:07:28:247  WARN 42160 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:07:28:248  WARN 42160 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:07:28:248  WARN 42160 --- [Thread-5] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:07:28:248  WARN 42160 --- [Thread-1] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:07:56:659  INFO 48552 --- [main] com.hmall.cart.CartApplication           : The following 1 profile is active: "local"
+15:07:57:070  INFO 48552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:07:57:072  INFO 48552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:07:57:087  INFO 48552 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+15:07:57:215  INFO 48552 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ee7e9b9d-d6ed-32d6-b2bd-77d61e5e4e7c
+15:07:57:420  INFO 48552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+15:07:57:426  INFO 48552 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:07:57:426  INFO 48552 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:07:57:498  INFO 48552 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:07:57:498  INFO 48552 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 831 ms
+15:07:57:606  INFO 48552 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:08:00:114  INFO 48552 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:08:01:097  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 092e03f3-6a43-42b2-b165-31937947f310
+15:08:01:097  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] RpcClient init label, labels = {module=naming, source=sdk}
+15:08:01:098  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:08:01:098  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:08:01:098  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:08:01:099  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
+15:08:01:216  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760598481301_192.168.100.1_59038
+15:08:01:216  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:08:01:216  INFO 48552 --- [main] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$472/0x00000008403cf440
+15:08:01:216  INFO 48552 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Notify connected event to listeners.
+15:08:01:248  INFO 48552 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+15:08:01:257  INFO 48552 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP cart-service 192.168.194.1:8081 register finished
+15:08:01:814  INFO 48552 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Receive server push request, request = NotifySubscriberRequest, requestId = 4
+15:08:01:816  INFO 48552 --- [nacos-grpc-client-executor-7] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Ack server push request, request = NotifySubscriberRequest, requestId = 4
+15:08:01:839  INFO 48552 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:08:01:840  INFO 48552 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:08:01:853  INFO 48552 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:08:01:899  INFO 48552 --- [main] com.hmall.cart.CartApplication           : Started CartApplication in 8.877 seconds (JVM running for 9.657)
+15:08:01:902  INFO 48552 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service, group=DEFAULT_GROUP
+15:08:01:903  INFO 48552 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service.yaml, group=DEFAULT_GROUP
+15:08:01:903  INFO 48552 --- [main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=cart-service-local.yaml, group=DEFAULT_GROUP
+15:16:59:871  INFO 48552 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:16:59:871  INFO 48552 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:16:59:872  INFO 48552 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:16:59:945  INFO 48552 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:17:00:069  INFO 48552 --- [http-nio-8081-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:17:00:073 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:17:00:084 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:17:00:113 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 2
+15:17:00:145 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=14741770661 HTTP/1.1
+15:17:00:145 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:17:00:145 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (399ms)
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:17:00 GMT
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:17:00:545 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (752-byte body)
+15:17:00:736  INFO 48552 --- [nacos-grpc-client-executor-124] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Receive server push request, request = NotifySubscriberRequest, requestId = 11
+15:17:00:736  INFO 48552 --- [nacos-grpc-client-executor-124] com.alibaba.nacos.common.remote.client   : [092e03f3-6a43-42b2-b165-31937947f310] Ack server push request, request = NotifySubscriberRequest, requestId = 11
+15:17:33:813 DEBUG 48552 --- [http-nio-8081-exec-2] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?,?))
+15:17:33:814 DEBUG 48552 --- [http-nio-8081-exec-2] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 8533120(Long), 14741770661(Long)
+15:17:33:823 DEBUG 48552 --- [http-nio-8081-exec-2] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 2
+15:22:13:877 DEBUG 48552 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:22:13:878 DEBUG 48552 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:22:13:881 DEBUG 48552 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 0
+15:22:17:696 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+15:22:17:696 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 100001511821(Long)
+15:22:17:699 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:22:17:699 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+15:22:17:699 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
+15:22:17:699 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:22:17:703 DEBUG 48552 --- [http-nio-8081-exec-7] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+15:22:17:703 DEBUG 48552 --- [http-nio-8081-exec-7] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 100001511821(Long), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+15:22:17:707 DEBUG 48552 --- [http-nio-8081-exec-7] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
+15:22:17:736 DEBUG 48552 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:22:17:736 DEBUG 48552 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:22:17:738 DEBUG 48552 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+15:22:17:739 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100001511821 HTTP/1.1
+15:22:17:739 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:22:17:739 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (17ms)
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:22:17 GMT
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:22:17:758 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"100001511821","name":"HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30","price":13700,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp","category":"牛仔裤","brand":"HMDIME","spec":"{\"颜色\": \"蓝色\", \"尺码\": \"30\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:22:17:759 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (460-byte body)
+15:22:23:216 DEBUG 48552 --- [http-nio-8081-exec-8] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+15:22:23:216 DEBUG 48552 --- [http-nio-8081-exec-8] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 100001511821(Long)
+15:22:23:224 DEBUG 48552 --- [http-nio-8081-exec-8] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 1
+15:37:06:076 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:37:06:077 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:37:06:078 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 0
+15:37:07:392 DEBUG 48552 --- [http-nio-8081-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:37:07:393 DEBUG 48552 --- [http-nio-8081-exec-2] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:37:07:395 DEBUG 48552 --- [http-nio-8081-exec-2] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 0
+15:37:09:556 DEBUG 48552 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+15:37:09:557 DEBUG 48552 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 40305713537(Long)
+15:37:09:558 DEBUG 48552 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:37:09:559 DEBUG 48552 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+15:37:09:559 DEBUG 48552 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
+15:37:09:560 DEBUG 48552 --- [http-nio-8081-exec-3] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:37:09:561 DEBUG 48552 --- [http-nio-8081-exec-3] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+15:37:09:562 DEBUG 48552 --- [http-nio-8081-exec-3] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 40305713537(Long), 【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41(String), {"颜色": "金色", "尺码": "41"}(String), 35400(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp(String)
+15:37:09:574 DEBUG 48552 --- [http-nio-8081-exec-3] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
+15:37:09:603 DEBUG 48552 --- [http-nio-8081-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:37:09:604 DEBUG 48552 --- [http-nio-8081-exec-5] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:37:09:606 DEBUG 48552 --- [http-nio-8081-exec-5] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+15:37:09:607 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=40305713537 HTTP/1.1
+15:37:09:607 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:37:09:607 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (9ms)
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:37:09 GMT
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"40305713537","name":"【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41","price":35400,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp","category":"休闲鞋","brand":"奥古狮登","spec":"{\"颜色\": \"金色\", \"尺码\": \"41\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:37:09:617 DEBUG 48552 --- [http-nio-8081-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (493-byte body)
+15:37:12:156 DEBUG 48552 --- [http-nio-8081-exec-6] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+15:37:12:156 DEBUG 48552 --- [http-nio-8081-exec-6] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 40305713537(Long)
+15:37:12:162 DEBUG 48552 --- [http-nio-8081-exec-6] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 1
+15:38:33:934 DEBUG 48552 --- [http-nio-8081-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:38:33:934 DEBUG 48552 --- [http-nio-8081-exec-8] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:38:33:936 DEBUG 48552 --- [http-nio-8081-exec-8] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 0
+15:38:34:717 DEBUG 48552 --- [http-nio-8081-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:38:34:718 DEBUG 48552 --- [http-nio-8081-exec-9] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:38:34:720 DEBUG 48552 --- [http-nio-8081-exec-9] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 0
+15:38:36:384 DEBUG 48552 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+15:38:36:385 DEBUG 48552 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 14741770661(Long)
+15:38:36:386 DEBUG 48552 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:38:36:387 DEBUG 48552 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+15:38:36:387 DEBUG 48552 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
+15:38:36:388 DEBUG 48552 --- [http-nio-8081-exec-10] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:38:36:389 DEBUG 48552 --- [http-nio-8081-exec-10] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+15:38:36:389 DEBUG 48552 --- [http-nio-8081-exec-10] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 14741770661(Long), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+15:38:36:395 DEBUG 48552 --- [http-nio-8081-exec-10] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
+15:38:36:424 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:38:36:424 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:38:36:426 DEBUG 48552 --- [http-nio-8081-exec-1] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+15:38:36:427 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=14741770661 HTTP/1.1
+15:38:36:427 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:38:36:427 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (9ms)
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:38:35 GMT
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9998,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:38:36:437 DEBUG 48552 --- [http-nio-8081-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (370-byte body)
+15:38:38:061 DEBUG 48552 --- [http-nio-8081-exec-2] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+15:38:38:062 DEBUG 48552 --- [http-nio-8081-exec-2] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 14741770661(Long)
+15:38:38:065 DEBUG 48552 --- [http-nio-8081-exec-2] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 1
+15:42:28:942 DEBUG 48552 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:42:28:942 DEBUG 48552 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:42:28:944 DEBUG 48552 --- [http-nio-8081-exec-6] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 0
+15:42:31:210 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ? AND item_id = ?)
+15:42:31:210 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long), 8533120(Long)
+15:42:31:212 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:42:31:215 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==>  Preparing: SELECT COUNT( * ) FROM cart WHERE (user_id = ?)
+15:42:31:216 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : ==> Parameters: 1(Long)
+15:42:31:217 DEBUG 48552 --- [http-nio-8081-exec-7] c.h.cart.mapper.CartMapper.selectCount   : <==      Total: 1
+15:42:31:219 DEBUG 48552 --- [http-nio-8081-exec-7] com.hmall.cart.mapper.CartMapper.insert  : ==>  Preparing: INSERT INTO cart ( user_id, item_id, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ? )
+15:42:31:219 DEBUG 48552 --- [http-nio-8081-exec-7] com.hmall.cart.mapper.CartMapper.insert  : ==> Parameters: 1(Long), 8533120(Long), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
+15:42:31:229 DEBUG 48552 --- [http-nio-8081-exec-7] com.hmall.cart.mapper.CartMapper.insert  : <==    Updates: 1
+15:42:31:261 DEBUG 48552 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==>  Preparing: SELECT id,user_id,item_id,num,name,spec,price,image,create_time,update_time FROM cart WHERE (user_id = ?)
+15:42:31:262 DEBUG 48552 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : ==> Parameters: 1(Long)
+15:42:31:265 DEBUG 48552 --- [http-nio-8081-exec-4] c.h.cart.mapper.CartMapper.selectList    : <==      Total: 1
+15:42:31:265 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120 HTTP/1.1
+15:42:31:266 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:42:31:266 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (11ms)
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:42:31 GMT
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:42:31:278 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:42:31:279 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":9998,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:42:31:279 DEBUG 48552 --- [http-nio-8081-exec-4] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (383-byte body)
+15:42:32:732 DEBUG 48552 --- [http-nio-8081-exec-8] com.hmall.cart.mapper.CartMapper.delete  : ==>  Preparing: DELETE FROM cart WHERE (user_id = ? AND item_id IN (?))
+15:42:32:732 DEBUG 48552 --- [http-nio-8081-exec-8] com.hmall.cart.mapper.CartMapper.delete  : ==> Parameters: 1(Long), 8533120(Long)
+15:42:32:738 DEBUG 48552 --- [http-nio-8081-exec-8] com.hmall.cart.mapper.CartMapper.delete  : <==    Updates: 1

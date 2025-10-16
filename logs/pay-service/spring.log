@@ -1,3 +1,576 @@
-00:02:53:085 DEBUG 39220 --- [http-nio-8083-exec-5] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
-00:02:53:086 DEBUG 39220 --- [http-nio-8083-exec-5] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978124511128170497(Long)
-00:02:53:091 DEBUG 39220 --- [http-nio-8083-exec-5] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 1
+15:05:03:226  INFO 43604 --- [main] com.hmall.pay.PayApplication             : Starting PayApplication using Java 11.0.28 on hachi with PID 43604 (D:\Study\ideaProject\JavaProject\hmall\pay-service\target\classes started by 39424 in D:\Study\ideaProject\JavaProject\hmall)
+15:05:03:252 DEBUG 43604 --- [main] com.hmall.pay.PayApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:05:03:252  INFO 43604 --- [main] com.hmall.pay.PayApplication             : The following 1 profile is active: "local"
+15:05:03:973  INFO 43604 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c0e5618-07b0-3c1c-94db-9579852d2853
+15:05:04:207  INFO 43604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+15:05:04:214  INFO 43604 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:05:04:214  INFO 43604 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:05:04:315  INFO 43604 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:05:04:315  INFO 43604 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1029 ms
+15:05:04:469  INFO 43604 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+15:05:04:689  INFO 43604 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
+15:05:07:529  INFO 43604 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:05:08:443  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of de19f544-be1b-43a1-8a00-a320f2247975
+15:05:08:471  INFO 43604 --- [main] org.reflections.Reflections              : Reflections took 14 ms to scan 1 urls, producing 3 keys and 6 values 
+15:05:08:491  INFO 43604 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 4 keys and 9 values 
+15:05:08:499  INFO 43604 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 3 keys and 10 values 
+15:05:08:501  WARN 43604 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:05:08:507  INFO 43604 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+15:05:08:514  INFO 43604 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 7 values 
+15:05:08:528  INFO 43604 --- [main] org.reflections.Reflections              : Reflections took 12 ms to scan 1 urls, producing 2 keys and 8 values 
+15:05:08:530  WARN 43604 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:05:08:530  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] RpcClient init label, labels = {module=naming, source=sdk}
+15:05:08:531  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:05:08:532  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:05:08:532  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:05:08:533  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
+15:05:10:519  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760598310549_192.168.100.1_63895
+15:05:10:519  INFO 43604 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Notify connected event to listeners.
+15:05:10:520  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:05:10:521  INFO 43604 --- [main] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1069/0x0000000840735c40
+15:05:10:589  INFO 43604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+15:05:10:613  INFO 43604 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.194.1:8083 register finished
+15:05:11:112  INFO 43604 --- [nacos-grpc-client-executor-11] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Receive server push request, request = NotifySubscriberRequest, requestId = 1
+15:05:11:123  INFO 43604 --- [nacos-grpc-client-executor-11] com.alibaba.nacos.common.remote.client   : [de19f544-be1b-43a1-8a00-a320f2247975] Ack server push request, request = NotifySubscriberRequest, requestId = 1
+15:05:11:326  INFO 43604 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:05:11:329  INFO 43604 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:05:11:347  INFO 43604 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:05:11:398  INFO 43604 --- [main] com.hmall.pay.PayApplication             : Started PayApplication in 9.265 seconds (JVM running for 10.273)
+15:14:21:109  WARN 43604 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:14:21:109  WARN 43604 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:14:21:109  WARN 43604 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:14:21:109  WARN 43604 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:14:27:301  INFO 40508 --- [main] com.hmall.pay.PayApplication             : Starting PayApplication using Java 11.0.28 on hachi with PID 40508 (D:\Study\ideaProject\JavaProject\hmall\pay-service\target\classes started by 39424 in D:\Study\ideaProject\JavaProject\hmall)
+15:14:27:301 DEBUG 40508 --- [main] com.hmall.pay.PayApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:14:27:301  INFO 40508 --- [main] com.hmall.pay.PayApplication             : The following 1 profile is active: "local"
+15:14:27:922  INFO 40508 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c0e5618-07b0-3c1c-94db-9579852d2853
+15:14:28:148  INFO 40508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+15:14:28:154  INFO 40508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:14:28:154  INFO 40508 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:14:28:242  INFO 40508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:14:28:242  INFO 40508 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 913 ms
+15:14:28:354  INFO 40508 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+15:14:28:503  INFO 40508 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
+15:14:31:043  INFO 40508 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:14:31:863  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 203a57c5-65c0-4ac0-be2f-085a53990c8b
+15:14:31:900  INFO 40508 --- [main] org.reflections.Reflections              : Reflections took 20 ms to scan 1 urls, producing 3 keys and 6 values 
+15:14:31:923  INFO 40508 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 4 keys and 9 values 
+15:14:31:939  INFO 40508 --- [main] org.reflections.Reflections              : Reflections took 14 ms to scan 1 urls, producing 3 keys and 10 values 
+15:14:31:941  WARN 40508 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:14:31:945  INFO 40508 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 5 values 
+15:14:31:950  INFO 40508 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 7 values 
+15:14:31:956  INFO 40508 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 2 keys and 8 values 
+15:14:31:957  WARN 40508 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:14:31:958  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] RpcClient init label, labels = {module=naming, source=sdk}
+15:14:31:959  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:14:31:959  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:14:31:959  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:14:31:960  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
+15:14:34:520  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760598874553_192.168.100.1_53121
+15:14:34:520  INFO 40508 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Notify connected event to listeners.
+15:14:34:521  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:14:34:522  INFO 40508 --- [main] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1069/0x00000008406ec040
+15:14:34:557  INFO 40508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+15:14:34:564  INFO 40508 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.194.1:8083 register finished
+15:14:35:087  INFO 40508 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Receive server push request, request = NotifySubscriberRequest, requestId = 8
+15:14:35:089  INFO 40508 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Ack server push request, request = NotifySubscriberRequest, requestId = 8
+15:14:35:162  INFO 40508 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:14:35:164  INFO 40508 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:14:35:178  INFO 40508 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:14:35:228  INFO 40508 --- [main] com.hmall.pay.PayApplication             : Started PayApplication in 8.977 seconds (JVM running for 10.533)
+15:17:34:028  INFO 40508 --- [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:17:34:029  INFO 40508 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:17:34:030  INFO 40508 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:17:34:101  INFO 40508 --- [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:17:34:229  INFO 40508 --- [http-nio-8083-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:17:34:235 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+15:17:34:247 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978721963946319873(Long)
+15:17:34:265 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+15:17:34:293 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.insert     : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+15:17:34:295 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.insert     : ==> Parameters: 1978721966257393666(Long), 1978721963946319873(Long), 1978721966257393665(Long), 1(Long), balance(String), 524100(Integer), 5(Integer), 1(Integer), 2025-10-16T17:17:34.289679100(LocalDateTime)
+15:17:34:302 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.insert     : <==    Updates: 1
+15:17:44:341 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:17:44:342 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978721966257393666(Long)
+15:17:44:346 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:17:44:348 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw&amount=524100 HTTP/1.1
+15:17:44:348 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:17:44:348 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:17:44:538 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 500  (190ms)
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: close
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-type: application/json
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:17:44 GMT
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] transfer-encoding: chunked
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] 
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] {"timestamp":"2025-10-16T07:17:44.529+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}
+15:17:44:539 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (119-byte body)
+15:17:44:549 ERROR 40508 --- [http-nio-8083-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is feign.FeignException$InternalServerError: [500 ] during [PUT] to [http://user-service/users/money/deduct?pw&amount=524100] [UserClient#deductMoney(String,Integer)]: [{"timestamp":"2025-10-16T07:17:44.529+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}]] with root cause
+
+feign.FeignException$InternalServerError: [500 ] during [PUT] to [http://user-service/users/money/deduct?pw&amount=524100] [UserClient#deductMoney(String,Integer)]: [{"timestamp":"2025-10-16T07:17:44.529+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:250) ~[feign-core-11.8.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:197) ~[feign-core-11.8.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:185) ~[feign-core-11.8.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-11.8.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:96) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:138) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-11.8.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100) ~[feign-core-11.8.jar:na]
+	at com.sun.proxy.$Proxy107.deductMoney(Unknown Source) ~[na:na]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl.tryPayOrderByBalance(PayOrderServiceImpl.java:64) ~[classes/:na]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl$$FastClassBySpringCGLIB$$31d4529f.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl$$EnhancerBySpringCGLIB$$f9ad06fa.tryPayOrderByBalance(<generated>) ~[classes/:na]
+	at com.hmall.pay.controller.PayController.tryPayOrderByBalance(PayController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+15:17:44:957  INFO 40508 --- [nacos-grpc-client-executor-52] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Receive server push request, request = NotifySubscriberRequest, requestId = 16
+15:17:44:957  INFO 40508 --- [nacos-grpc-client-executor-52] com.alibaba.nacos.common.remote.client   : [203a57c5-65c0-4ac0-be2f-085a53990c8b] Ack server push request, request = NotifySubscriberRequest, requestId = 16
+15:17:46:740 ERROR 40508 --- [http-nio-8083-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.hmall.common.exception.BizIllegalException: 抱歉，目前只支持余额支付] with root cause
+
+com.hmall.common.exception.BizIllegalException: 抱歉，目前只支持余额支付
+	at com.hmall.pay.controller.PayController.applyPayOrder(PayController.java:27) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+15:17:48:703 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+15:17:48:703 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978721963946319873(Long)
+15:17:48:705 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 1
+15:17:49:205 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:17:49:206 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978721966257393666(Long)
+15:17:49:208 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:17:49:209 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw&amount=524100 HTTP/1.1
+15:17:49:209 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:17:49:209 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:17:49:276 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 500  (67ms)
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: close
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-type: application/json
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:17:49 GMT
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] transfer-encoding: chunked
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] 
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] {"timestamp":"2025-10-16T07:17:49.276+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}
+15:17:49:277 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (119-byte body)
+15:17:49:282 ERROR 40508 --- [http-nio-8083-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is feign.FeignException$InternalServerError: [500 ] during [PUT] to [http://user-service/users/money/deduct?pw&amount=524100] [UserClient#deductMoney(String,Integer)]: [{"timestamp":"2025-10-16T07:17:49.276+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}]] with root cause
+
+feign.FeignException$InternalServerError: [500 ] during [PUT] to [http://user-service/users/money/deduct?pw&amount=524100] [UserClient#deductMoney(String,Integer)]: [{"timestamp":"2025-10-16T07:17:49.276+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:250) ~[feign-core-11.8.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:197) ~[feign-core-11.8.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:185) ~[feign-core-11.8.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-11.8.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:96) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:138) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-11.8.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100) ~[feign-core-11.8.jar:na]
+	at com.sun.proxy.$Proxy107.deductMoney(Unknown Source) ~[na:na]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl.tryPayOrderByBalance(PayOrderServiceImpl.java:64) ~[classes/:na]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl$$FastClassBySpringCGLIB$$31d4529f.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl$$EnhancerBySpringCGLIB$$f9ad06fa.tryPayOrderByBalance(<generated>) ~[classes/:na]
+	at com.hmall.pay.controller.PayController.tryPayOrderByBalance(PayController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+15:17:51:691 DEBUG 40508 --- [http-nio-8083-exec-8] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:17:51:691 DEBUG 40508 --- [http-nio-8083-exec-8] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978721966257393666(Long)
+15:17:51:693 DEBUG 40508 --- [http-nio-8083-exec-8] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:17:51:694 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw=123&amount=524100 HTTP/1.1
+15:17:51:694 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:17:51:694 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:17:51:764 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 200  (69ms)
+15:17:51:764 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: keep-alive
+15:17:51:764 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-length: 0
+15:17:51:765 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:17:51 GMT
+15:17:51:765 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] keep-alive: timeout=60
+15:17:51:765 DEBUG 40508 --- [http-nio-8083-exec-8] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (0-byte body)
+15:17:51:768 DEBUG 40508 --- [http-nio-8083-exec-8] c.h.pay.mapper.PayOrderMapper.update     : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+15:17:51:768 DEBUG 40508 --- [http-nio-8083-exec-8] c.h.pay.mapper.PayOrderMapper.update     : ==> Parameters: 3(Integer), 2025-10-16T15:17:51.765164700(LocalDateTime), 1978721966257393666(Long), 0(Integer), 1(Integer)
+15:17:51:771 DEBUG 40508 --- [http-nio-8083-exec-8] c.h.pay.mapper.PayOrderMapper.update     : <==    Updates: 1
+15:17:51:774  INFO 40508 --- [http-nio-8083-exec-8] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.100.10:5672]
+15:17:51:798  INFO 40508 --- [http-nio-8083-exec-8] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#20864cd1:0/SimpleConnection@c695fd0 [delegate=amqp://hmall@192.168.100.10:5672//hmall, localPort= 52722]
+15:22:23:294 DEBUG 40508 --- [http-nio-8083-exec-7] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+15:22:23:294 DEBUG 40508 --- [http-nio-8083-exec-7] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978723178037944322(Long)
+15:22:23:296 DEBUG 40508 --- [http-nio-8083-exec-7] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+15:22:23:298 DEBUG 40508 --- [http-nio-8083-exec-7] c.h.pay.mapper.PayOrderMapper.insert     : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+15:22:23:299 DEBUG 40508 --- [http-nio-8083-exec-7] c.h.pay.mapper.PayOrderMapper.insert     : ==> Parameters: 1978723178440609795(Long), 1978723178037944322(Long), 1978723178440609794(Long), 1(Long), balance(String), 13700(Integer), 5(Integer), 1(Integer), 2025-10-16T17:22:23.296239700(LocalDateTime)
+15:22:23:302 DEBUG 40508 --- [http-nio-8083-exec-7] c.h.pay.mapper.PayOrderMapper.insert     : <==    Updates: 1
+15:22:50:860 DEBUG 40508 --- [http-nio-8083-exec-9] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:22:50:861 DEBUG 40508 --- [http-nio-8083-exec-9] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978723178440609795(Long)
+15:22:50:863 DEBUG 40508 --- [http-nio-8083-exec-9] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:22:50:865 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw=123&amount=13700 HTTP/1.1
+15:22:50:865 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:22:50:865 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:22:50:972 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 200  (106ms)
+15:22:50:973 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: keep-alive
+15:22:50:973 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-length: 0
+15:22:50:973 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:22:50 GMT
+15:22:50:973 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] keep-alive: timeout=60
+15:22:50:973 DEBUG 40508 --- [http-nio-8083-exec-9] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (0-byte body)
+15:22:50:975 DEBUG 40508 --- [http-nio-8083-exec-9] c.h.pay.mapper.PayOrderMapper.update     : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+15:22:50:976 DEBUG 40508 --- [http-nio-8083-exec-9] c.h.pay.mapper.PayOrderMapper.update     : ==> Parameters: 3(Integer), 2025-10-16T15:22:50.973364(LocalDateTime), 1978723178440609795(Long), 0(Integer), 1(Integer)
+15:22:50:979 DEBUG 40508 --- [http-nio-8083-exec-9] c.h.pay.mapper.PayOrderMapper.update     : <==    Updates: 1
+15:37:12:240 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+15:37:12:240 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978726906526736386(Long)
+15:37:12:242 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+15:37:12:244 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.insert     : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+15:37:12:244 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.insert     : ==> Parameters: 1978726906946179075(Long), 1978726906526736386(Long), 1978726906946179074(Long), 1(Long), balance(String), 35400(Integer), 5(Integer), 1(Integer), 2025-10-16T17:37:12.243557100(LocalDateTime)
+15:37:12:249 DEBUG 40508 --- [http-nio-8083-exec-2] c.h.pay.mapper.PayOrderMapper.insert     : <==    Updates: 1
+15:37:13:729 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:37:13:729 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978726906946179075(Long)
+15:37:13:731 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:37:13:732 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw=123&amount=35400 HTTP/1.1
+15:37:13:732 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:37:13:732 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:37:13:832 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 200  (99ms)
+15:37:13:832 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: keep-alive
+15:37:13:832 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-length: 0
+15:37:13:832 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:37:13 GMT
+15:37:13:832 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] keep-alive: timeout=60
+15:37:13:832 DEBUG 40508 --- [http-nio-8083-exec-1] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (0-byte body)
+15:37:13:833 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.update     : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+15:37:13:833 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.update     : ==> Parameters: 3(Integer), 2025-10-16T15:37:13.832235100(LocalDateTime), 1978726906946179075(Long), 0(Integer), 1(Integer)
+15:37:13:835 DEBUG 40508 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.update     : <==    Updates: 1
+15:38:38:137 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+15:38:38:137 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978727266851004418(Long)
+15:38:38:140 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+15:38:38:141 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.insert     : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+15:38:38:142 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.insert     : ==> Parameters: 1978727267228504066(Long), 1978727266851004418(Long), 1978727267228504065(Long), 1(Long), balance(String), 144600(Integer), 5(Integer), 1(Integer), 2025-10-16T17:38:38.141613(LocalDateTime)
+15:38:38:148 DEBUG 40508 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.insert     : <==    Updates: 1
+15:38:39:482 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:38:39:483 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978727267228504066(Long)
+15:38:39:485 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:38:39:485 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw=123&amount=144600 HTTP/1.1
+15:38:39:486 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:38:39:486 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:38:39:579 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 200  (92ms)
+15:38:39:579 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: keep-alive
+15:38:39:579 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-length: 0
+15:38:39:579 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:38:39 GMT
+15:38:39:579 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] keep-alive: timeout=60
+15:38:39:579 DEBUG 40508 --- [http-nio-8083-exec-5] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (0-byte body)
+15:38:39:580 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.pay.mapper.PayOrderMapper.update     : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+15:38:39:580 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.pay.mapper.PayOrderMapper.update     : ==> Parameters: 3(Integer), 2025-10-16T15:38:39.579239100(LocalDateTime), 1978727267228504066(Long), 0(Integer), 1(Integer)
+15:38:39:583 DEBUG 40508 --- [http-nio-8083-exec-5] c.h.pay.mapper.PayOrderMapper.update     : <==    Updates: 1
+15:40:29:733  WARN 40508 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Start destroying Publisher
+15:40:29:733  WARN 40508 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Start destroying common HttpClient
+15:40:29:733  WARN 40508 --- [Thread-4] c.a.nacos.common.notify.NotifyCenter     : [NotifyCenter] Destruction of the end
+15:40:29:734  WARN 40508 --- [Thread-7] c.a.n.common.http.HttpClientBeanHolder   : [HttpClientBeanHolder] Destruction of the end
+15:40:34:290  INFO 26408 --- [main] com.hmall.pay.PayApplication             : Starting PayApplication using Java 11.0.28 on hachi with PID 26408 (D:\Study\ideaProject\JavaProject\hmall\pay-service\target\classes started by 39424 in D:\Study\ideaProject\JavaProject\hmall)
+15:40:34:291 DEBUG 26408 --- [main] com.hmall.pay.PayApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:40:34:291  INFO 26408 --- [main] com.hmall.pay.PayApplication             : The following 1 profile is active: "local"
+15:40:34:942  INFO 26408 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=1c0e5618-07b0-3c1c-94db-9579852d2853
+15:40:35:179  INFO 26408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+15:40:35:185  INFO 26408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:40:35:186  INFO 26408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:40:35:283  INFO 26408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:40:35:283  INFO 26408 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 952 ms
+15:40:35:405  INFO 26408 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
+15:40:35:576  INFO 26408 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
+15:40:38:083  INFO 26408 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:40:38:873  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b
+15:40:38:902  INFO 26408 --- [main] org.reflections.Reflections              : Reflections took 16 ms to scan 1 urls, producing 3 keys and 6 values 
+15:40:38:917  INFO 26408 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 4 keys and 9 values 
+15:40:38:924  INFO 26408 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 3 keys and 10 values 
+15:40:38:926  WARN 26408 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:40:38:931  INFO 26408 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 1 keys and 5 values 
+15:40:38:939  INFO 26408 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
+15:40:38:946  INFO 26408 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 2 keys and 8 values 
+15:40:38:947  WARN 26408 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:40:38:948  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] RpcClient init label, labels = {module=naming, source=sdk}
+15:40:38:950  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:40:38:950  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:40:38:950  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:40:38:952  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
+15:40:40:911  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760600440961_192.168.100.1_56924
+15:40:40:912  INFO 26408 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Notify connected event to listeners.
+15:40:40:913  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:40:40:914  INFO 26408 --- [main] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1069/0x00000008406ec040
+15:40:40:956  INFO 26408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+15:40:40:964  INFO 26408 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.194.1:8083 register finished
+15:40:41:476  INFO 26408 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Receive server push request, request = NotifySubscriberRequest, requestId = 20
+15:40:41:477  INFO 26408 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Ack server push request, request = NotifySubscriberRequest, requestId = 20
+15:40:41:565  INFO 26408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:40:41:567  INFO 26408 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:40:41:581  INFO 26408 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:40:41:635  INFO 26408 --- [main] com.hmall.pay.PayApplication             : Started PayApplication in 8.407 seconds (JVM running for 9.343)
+15:42:32:851  INFO 26408 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:42:32:851  INFO 26408 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:42:32:852  INFO 26408 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:42:32:965  INFO 26408 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:42:33:205  INFO 26408 --- [http-nio-8083-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:42:33:210 DEBUG 26408 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.selectOne  : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE (biz_order_no = ?)
+15:42:33:229 DEBUG 26408 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.selectOne  : ==> Parameters: 1978728251103158273(Long)
+15:42:33:246 DEBUG 26408 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.selectOne  : <==      Total: 0
+15:42:33:292 DEBUG 26408 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.insert     : ==>  Preparing: INSERT INTO pay_order ( id, biz_order_no, pay_order_no, biz_user_id, pay_channel_code, amount, pay_type, status, pay_over_time ) VALUES ( ?, ?, ?, ?, ?, ?, ?, ?, ? )
+15:42:33:294 DEBUG 26408 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.insert     : ==> Parameters: 1978728253531635714(Long), 1978728251103158273(Long), 1978728253506469889(Long), 1(Long), balance(String), 379500(Integer), 5(Integer), 1(Integer), 2025-10-16T17:42:33.285730800(LocalDateTime)
+15:42:33:298 DEBUG 26408 --- [http-nio-8083-exec-1] c.h.pay.mapper.PayOrderMapper.insert     : <==    Updates: 1
+15:42:33:662 DEBUG 26408 --- [http-nio-8083-exec-2] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:42:33:662 DEBUG 26408 --- [http-nio-8083-exec-2] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978728253531635714(Long)
+15:42:33:668 DEBUG 26408 --- [http-nio-8083-exec-2] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:42:33:672 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw&amount=379500 HTTP/1.1
+15:42:33:672 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:42:33:672 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:42:33:879 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 500  (206ms)
+15:42:33:879 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: close
+15:42:33:879 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-type: application/json
+15:42:33:879 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:42:33 GMT
+15:42:33:879 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] transfer-encoding: chunked
+15:42:33:879 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] 
+15:42:33:881 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] {"timestamp":"2025-10-16T07:42:33.871+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}
+15:42:33:881 DEBUG 26408 --- [http-nio-8083-exec-2] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (119-byte body)
+15:42:33:893 ERROR 26408 --- [http-nio-8083-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is feign.FeignException$InternalServerError: [500 ] during [PUT] to [http://user-service/users/money/deduct?pw&amount=379500] [UserClient#deductMoney(String,Integer)]: [{"timestamp":"2025-10-16T07:42:33.871+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}]] with root cause
+
+feign.FeignException$InternalServerError: [500 ] during [PUT] to [http://user-service/users/money/deduct?pw&amount=379500] [UserClient#deductMoney(String,Integer)]: [{"timestamp":"2025-10-16T07:42:33.871+00:00","status":500,"error":"Internal Server Error","path":"/users/money/deduct"}]
+	at feign.FeignException.serverErrorStatus(FeignException.java:250) ~[feign-core-11.8.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:197) ~[feign-core-11.8.jar:na]
+	at feign.FeignException.errorStatus(FeignException.java:185) ~[feign-core-11.8.jar:na]
+	at feign.codec.ErrorDecoder$Default.decode(ErrorDecoder.java:92) ~[feign-core-11.8.jar:na]
+	at feign.AsyncResponseHandler.handleResponse(AsyncResponseHandler.java:96) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:138) ~[feign-core-11.8.jar:na]
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:89) ~[feign-core-11.8.jar:na]
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:100) ~[feign-core-11.8.jar:na]
+	at com.sun.proxy.$Proxy107.deductMoney(Unknown Source) ~[na:na]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl.tryPayOrderByBalance(PayOrderServiceImpl.java:64) ~[classes/:na]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl$$FastClassBySpringCGLIB$$31d4529f.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.27.jar:5.3.27]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.27.jar:5.3.27]
+	at com.hmall.pay.service.Impl.PayOrderServiceImpl$$EnhancerBySpringCGLIB$$ce8865eb.tryPayOrderByBalance(<generated>) ~[classes/:na]
+	at com.hmall.pay.controller.PayController.tryPayOrderByBalance(PayController.java:37) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.27.jar:5.3.27]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.75.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.27.jar:5.3.27]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.75.jar:9.0.75]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+
+15:42:34:277  INFO 26408 --- [nacos-grpc-client-executor-33] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Receive server push request, request = NotifySubscriberRequest, requestId = 21
+15:42:34:278  INFO 26408 --- [nacos-grpc-client-executor-33] com.alibaba.nacos.common.remote.client   : [2177e1bb-4c87-4f6b-a78b-0cb66cfc1a1b] Ack server push request, request = NotifySubscriberRequest, requestId = 21
+15:42:35:764 DEBUG 26408 --- [http-nio-8083-exec-3] c.h.p.mapper.PayOrderMapper.selectById   : ==>  Preparing: SELECT id,biz_order_no,pay_order_no,biz_user_id,pay_channel_code,amount,pay_type,status,expand_json,result_code,result_msg,pay_success_time,pay_over_time,qr_code_url,create_time,update_time,creater,updater,is_delete FROM pay_order WHERE id=?
+15:42:35:764 DEBUG 26408 --- [http-nio-8083-exec-3] c.h.p.mapper.PayOrderMapper.selectById   : ==> Parameters: 1978728253531635714(Long)
+15:42:35:765 DEBUG 26408 --- [http-nio-8083-exec-3] c.h.p.mapper.PayOrderMapper.selectById   : <==      Total: 1
+15:42:35:766 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> PUT http://user-service/users/money/deduct?pw=123&amount=379500 HTTP/1.1
+15:42:35:766 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] user-info: 1
+15:42:35:766 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] ---> END HTTP (0-byte body)
+15:42:35:860 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- HTTP/1.1 200  (94ms)
+15:42:35:860 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] connection: keep-alive
+15:42:35:860 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] content-length: 0
+15:42:35:860 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] date: Thu, 16 Oct 2025 07:42:35 GMT
+15:42:35:860 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] keep-alive: timeout=60
+15:42:35:861 DEBUG 26408 --- [http-nio-8083-exec-3] com.hmall.api.client.UserClient          : [UserClient#deductMoney] <--- END HTTP (0-byte body)
+15:42:35:865 DEBUG 26408 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.update     : ==>  Preparing: UPDATE pay_order SET status=?,pay_success_time=? WHERE (id = ? AND status IN (?,?))
+15:42:35:866 DEBUG 26408 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.update     : ==> Parameters: 3(Integer), 2025-10-16T15:42:35.861187900(LocalDateTime), 1978728253531635714(Long), 0(Integer), 1(Integer)
+15:42:35:869 DEBUG 26408 --- [http-nio-8083-exec-3] c.h.pay.mapper.PayOrderMapper.update     : <==    Updates: 1
+15:42:35:871  INFO 26408 --- [http-nio-8083-exec-3] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.100.10:5672]
+15:42:35:898  INFO 26408 --- [http-nio-8083-exec-3] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3e28dc96:0/SimpleConnection@18891605 [delegate=amqp://hmall@192.168.100.10:5672//hmall, localPort= 63172]

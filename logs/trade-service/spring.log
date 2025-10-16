@@ -1,9 +1,293 @@
-00:02:30:586  INFO 27576 --- [nacos-grpc-client-executor-285] com.alibaba.nacos.common.remote.client   : [2b2580e3-a4be-4c3a-a327-5f31c676b8b4] Receive server push request, request = NotifySubscriberRequest, requestId = 18
-00:02:30:589  INFO 27576 --- [nacos-grpc-client-executor-285] com.alibaba.nacos.common.remote.client   : [2b2580e3-a4be-4c3a-a327-5f31c676b8b4] Ack server push request, request = NotifySubscriberRequest, requestId = 18
-00:02:40:793  INFO 27576 --- [nacos-grpc-client-executor-289] com.alibaba.nacos.common.remote.client   : [2b2580e3-a4be-4c3a-a327-5f31c676b8b4] Receive server push request, request = NotifySubscriberRequest, requestId = 20
-00:02:40:794  INFO 27576 --- [nacos-grpc-client-executor-289] com.alibaba.nacos.common.remote.client   : [2b2580e3-a4be-4c3a-a327-5f31c676b8b4] Ack server push request, request = NotifySubscriberRequest, requestId = 20
-00:02:53:066 DEBUG 27576 --- [http-nio-8084-exec-4] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
-00:02:53:066 DEBUG 27576 --- [http-nio-8084-exec-4] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978124511128170497(Long)
-00:02:53:068 DEBUG 27576 --- [http-nio-8084-exec-4] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
-00:45:25:359  INFO 27576 --- [nacos-grpc-client-executor-803] com.alibaba.nacos.common.remote.client   : [2b2580e3-a4be-4c3a-a327-5f31c676b8b4] Receive server push request, request = NotifySubscriberRequest, requestId = 24
-00:45:25:361  INFO 27576 --- [nacos-grpc-client-executor-803] com.alibaba.nacos.common.remote.client   : [2b2580e3-a4be-4c3a-a327-5f31c676b8b4] Ack server push request, request = NotifySubscriberRequest, requestId = 24
+15:08:16:371  INFO 45708 --- [main] com.hmall.trade.TradeApplication         : Starting TradeApplication using Java 11.0.28 on hachi with PID 45708 (D:\Study\ideaProject\JavaProject\hmall\trade-service\target\classes started by 39424 in D:\Study\ideaProject\JavaProject\hmall)
+15:08:16:374 DEBUG 45708 --- [main] com.hmall.trade.TradeApplication         : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:08:16:374  INFO 45708 --- [main] com.hmall.trade.TradeApplication         : The following 1 profile is active: "local"
+15:08:16:945  INFO 45708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:08:16:946  INFO 45708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:08:16:961  INFO 45708 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+15:08:17:087  INFO 45708 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6f073bac-85f0-34e8-9e51-992ae86f8e24
+15:08:17:324  INFO 45708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+15:08:17:329  INFO 45708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:08:17:329  INFO 45708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:08:17:409  INFO 45708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:08:17:409  INFO 45708 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1010 ms
+15:08:17:545  INFO 45708 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'item-service' URL not provided. Will try picking an instance via load-balancing.
+15:08:19:577  INFO 45708 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'cart-service' URL not provided. Will try picking an instance via load-balancing.
+15:08:20:909  INFO 45708 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:08:21:916  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 5809f460-c368-4e66-ab19-7e9371abb714
+15:08:21:937  INFO 45708 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 3 keys and 6 values 
+15:08:21:950  INFO 45708 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 4 keys and 9 values 
+15:08:21:955  INFO 45708 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 3 keys and 10 values 
+15:08:21:956  WARN 45708 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:08:21:960  INFO 45708 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 1 keys and 5 values 
+15:08:21:965  INFO 45708 --- [main] org.reflections.Reflections              : Reflections took 4 ms to scan 1 urls, producing 1 keys and 7 values 
+15:08:21:970  INFO 45708 --- [main] org.reflections.Reflections              : Reflections took 3 ms to scan 1 urls, producing 2 keys and 8 values 
+15:08:21:971  WARN 45708 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:08:21:972  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] RpcClient init label, labels = {module=naming, source=sdk}
+15:08:21:973  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:08:21:973  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:08:21:973  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:08:21:974  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
+15:08:23:954  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760598503990_192.168.100.1_61366
+15:08:23:954  INFO 45708 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Notify connected event to listeners.
+15:08:23:955  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:08:23:956  INFO 45708 --- [main] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1263/0x00000008407a2440
+15:08:23:991  INFO 45708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path ''
+15:08:24:001  INFO 45708 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP trade-service 192.168.194.1:8084 register finished
+15:08:24:574  INFO 45708 --- [nacos-grpc-client-executor-11] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Receive server push request, request = NotifySubscriberRequest, requestId = 5
+15:08:24:577  INFO 45708 --- [nacos-grpc-client-executor-11] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Ack server push request, request = NotifySubscriberRequest, requestId = 5
+15:08:24:608  INFO 45708 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:08:24:610  INFO 45708 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:08:24:621  INFO 45708 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:08:24:665  INFO 45708 --- [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [192.168.100.10:5672]
+15:08:24:688  INFO 45708 --- [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#3d9c8c3c:0/SimpleConnection@487ee2a [delegate=amqp://hmall@192.168.100.10:5672//hmall, localPort= 61369]
+15:08:24:757  INFO 45708 --- [main] com.hmall.trade.TradeApplication         : Started TradeApplication in 9.433 seconds (JVM running for 10.266)
+15:17:33:456  INFO 45708 --- [http-nio-8084-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:17:33:456  INFO 45708 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:17:33:457  INFO 45708 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:17:33:489  INFO 45708 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:17:33:598  INFO 45708 --- [http-nio-8084-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:17:33:610 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120&ids=14741770661 HTTP/1.1
+15:17:33:610 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:17:33:611 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:17:33:708 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (97ms)
+15:17:33:708 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:17:33:708 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:17:33:709 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:17:33 GMT
+15:17:33:709 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:17:33:709 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:17:33:709 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:17:33:709 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1},{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9999,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:17:33:710 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (752-byte body)
+15:17:33:744 DEBUG 45708 --- [http-nio-8084-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:17:33:757 DEBUG 45708 --- [http-nio-8084-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1978721963946319873(Long), 524100(Integer), 3(Integer), 1(Long), 1(Integer)
+15:17:33:769 DEBUG 45708 --- [http-nio-8084-exec-1] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:17:33:775 DEBUG 45708 --- [http-nio-8084-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:17:33:775 DEBUG 45708 --- [http-nio-8084-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1978721963946319873(Long), 8533120(Long), 1(Integer), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
+15:17:33:776 DEBUG 45708 --- [http-nio-8084-exec-1] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1978721963946319873(Long), 14741770661(Long), 1(Integer), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+15:17:33:793 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> DELETE http://cart-service/carts?ids=8533120&ids=14741770661 HTTP/1.1
+15:17:33:793 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] user-info: 1
+15:17:33:793 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> END HTTP (0-byte body)
+15:17:33:825 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- HTTP/1.1 200  (31ms)
+15:17:33:825 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] connection: keep-alive
+15:17:33:825 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] content-length: 0
+15:17:33:825 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] date: Thu, 16 Oct 2025 07:17:33 GMT
+15:17:33:825 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] keep-alive: timeout=60
+15:17:33:825 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- END HTTP (0-byte body)
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> PUT http://item-service/items/stock/deduct HTTP/1.1
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Length: 63
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Type: application/json
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] user-info: 1
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] 
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] [{"itemId":"14741770661","num":1},{"itemId":"8533120","num":1}]
+15:17:33:832 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> END HTTP (63-byte body)
+15:17:33:858 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- HTTP/1.1 200  (26ms)
+15:17:33:859 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] connection: keep-alive
+15:17:33:859 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] content-length: 0
+15:17:33:859 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] date: Thu, 16 Oct 2025 07:17:33 GMT
+15:17:33:859 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] keep-alive: timeout=60
+15:17:33:859 DEBUG 45708 --- [http-nio-8084-exec-1] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- END HTTP (0-byte body)
+15:17:33:928 DEBUG 45708 --- [http-nio-8084-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:17:33:929 DEBUG 45708 --- [http-nio-8084-exec-2] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978721963946319873(Long)
+15:17:33:937 DEBUG 45708 --- [http-nio-8084-exec-2] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:17:34:209  INFO 45708 --- [nacos-grpc-client-executor-135] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Receive server push request, request = NotifySubscriberRequest, requestId = 13
+15:17:34:210  INFO 45708 --- [nacos-grpc-client-executor-135] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Ack server push request, request = NotifySubscriberRequest, requestId = 13
+15:17:34:312  INFO 45708 --- [nacos-grpc-client-executor-136] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Receive server push request, request = NotifySubscriberRequest, requestId = 14
+15:17:34:313  INFO 45708 --- [nacos-grpc-client-executor-136] com.alibaba.nacos.common.remote.client   : [5809f460-c368-4e66-ab19-7e9371abb714] Ack server push request, request = NotifySubscriberRequest, requestId = 14
+15:17:51:841 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:17:51:846 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-10-16T15:17:51.832044900(LocalDateTime), 1978721966257393665(Long)
+15:17:51:848 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 0
+15:17:51:854 DEBUG 45708 --- [http-nio-8084-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:17:51:854 DEBUG 45708 --- [http-nio-8084-exec-3] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978721963946319873(Long)
+15:17:51:857 DEBUG 45708 --- [http-nio-8084-exec-3] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:22:23:185 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=100001511821 HTTP/1.1
+15:22:23:185 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:22:23:185 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (12ms)
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:22:23 GMT
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"100001511821","name":"HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30","price":13700,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp","category":"牛仔裤","brand":"HMDIME","spec":"{\"颜色\": \"蓝色\", \"尺码\": \"30\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:22:23:196 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (460-byte body)
+15:22:23:201 DEBUG 45708 --- [http-nio-8084-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:22:23:201 DEBUG 45708 --- [http-nio-8084-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1978723178037944322(Long), 13700(Integer), 3(Integer), 1(Long), 1(Integer)
+15:22:23:204 DEBUG 45708 --- [http-nio-8084-exec-5] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:22:23:204 DEBUG 45708 --- [http-nio-8084-exec-5] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:22:23:204 DEBUG 45708 --- [http-nio-8084-exec-5] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1978723178037944322(Long), 100001511821(Long), 1(Integer), HMDIME 牛仔背带裤女2018秋冬新品 韩版学院风潮流百搭弹力修身补丁学生吊带长裤女 AXNZ369 深蓝 30(String), {"颜色": "蓝色", "尺码": "30"}(String), 13700(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t30892/263/313055374/557791/c98e9abc/5bef811aN036f7c3b.jpg!q70.jpg.webp(String)
+15:22:23:208 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> DELETE http://cart-service/carts?ids=100001511821 HTTP/1.1
+15:22:23:208 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] user-info: 1
+15:22:23:208 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> END HTTP (0-byte body)
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- HTTP/1.1 200  (15ms)
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] connection: keep-alive
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] content-length: 0
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] date: Thu, 16 Oct 2025 07:22:23 GMT
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] keep-alive: timeout=60
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- END HTTP (0-byte body)
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> PUT http://item-service/items/stock/deduct HTTP/1.1
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Length: 35
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Type: application/json
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] user-info: 1
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] 
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] [{"itemId":"100001511821","num":1}]
+15:22:23:224 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> END HTTP (35-byte body)
+15:22:23:236 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- HTTP/1.1 200  (10ms)
+15:22:23:236 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] connection: keep-alive
+15:22:23:236 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] content-length: 0
+15:22:23:236 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] date: Thu, 16 Oct 2025 07:22:23 GMT
+15:22:23:236 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] keep-alive: timeout=60
+15:22:23:236 DEBUG 45708 --- [http-nio-8084-exec-5] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- END HTTP (0-byte body)
+15:22:23:272 DEBUG 45708 --- [http-nio-8084-exec-6] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:22:23:273 DEBUG 45708 --- [http-nio-8084-exec-6] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978723178037944322(Long)
+15:22:23:274 DEBUG 45708 --- [http-nio-8084-exec-6] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:22:50:984 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:22:50:984 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-10-16T15:22:50.982365800(LocalDateTime), 1978723178440609794(Long)
+15:22:50:986 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 0
+15:22:51:016 DEBUG 45708 --- [http-nio-8084-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:22:51:016 DEBUG 45708 --- [http-nio-8084-exec-7] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978723178037944322(Long)
+15:22:51:019 DEBUG 45708 --- [http-nio-8084-exec-7] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:37:12:131 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=40305713537 HTTP/1.1
+15:37:12:132 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:37:12:132 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:37:12:140 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (9ms)
+15:37:12:140 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:37:12:140 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:37:12:140 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:37:12 GMT
+15:37:12:140 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:37:12:140 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:37:12:141 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:37:12:141 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"40305713537","name":"【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41","price":35400,"stock":10000,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp","category":"休闲鞋","brand":"奥古狮登","spec":"{\"颜色\": \"金色\", \"尺码\": \"41\"}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:37:12:141 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (493-byte body)
+15:37:12:142 DEBUG 45708 --- [http-nio-8084-exec-9] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:37:12:143 DEBUG 45708 --- [http-nio-8084-exec-9] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1978726906526736386(Long), 35400(Integer), 3(Integer), 1(Long), 1(Integer)
+15:37:12:146 DEBUG 45708 --- [http-nio-8084-exec-9] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:37:12:147 DEBUG 45708 --- [http-nio-8084-exec-9] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:37:12:147 DEBUG 45708 --- [http-nio-8084-exec-9] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1978726906526736386(Long), 40305713537(Long), 1(Integer), 【官方正品 品牌直营】奥古狮登小白鞋女秋季透气2018新款百搭韩版休闲鞋运动鞋女鞋厚底板鞋女 浅蓝【厚底】 41(String), {"颜色": "金色", "尺码": "41"}(String), 35400(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/14147/34/2890/275451/5c225484Ebd346404/e61513be4639ee2e.jpg!q70.jpg.webp(String)
+15:37:12:150 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> DELETE http://cart-service/carts?ids=40305713537 HTTP/1.1
+15:37:12:150 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] user-info: 1
+15:37:12:150 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> END HTTP (0-byte body)
+15:37:12:162 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- HTTP/1.1 200  (11ms)
+15:37:12:162 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] connection: keep-alive
+15:37:12:162 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] content-length: 0
+15:37:12:162 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] date: Thu, 16 Oct 2025 07:37:12 GMT
+15:37:12:162 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] keep-alive: timeout=60
+15:37:12:162 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- END HTTP (0-byte body)
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> PUT http://item-service/items/stock/deduct HTTP/1.1
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Length: 34
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Type: application/json
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] user-info: 1
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] 
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] [{"itemId":"40305713537","num":1}]
+15:37:12:163 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> END HTTP (34-byte body)
+15:37:12:174 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- HTTP/1.1 200  (10ms)
+15:37:12:174 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] connection: keep-alive
+15:37:12:174 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] content-length: 0
+15:37:12:174 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] date: Thu, 16 Oct 2025 07:37:12 GMT
+15:37:12:174 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] keep-alive: timeout=60
+15:37:12:174 DEBUG 45708 --- [http-nio-8084-exec-9] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- END HTTP (0-byte body)
+15:37:12:220 DEBUG 45708 --- [http-nio-8084-exec-10] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:37:12:221 DEBUG 45708 --- [http-nio-8084-exec-10] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978726906526736386(Long)
+15:37:12:223 DEBUG 45708 --- [http-nio-8084-exec-10] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:37:13:841 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:37:13:841 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-10-16T15:37:13.839257900(LocalDateTime), 1978726906946179074(Long)
+15:37:13:843 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 0
+15:37:13:874 DEBUG 45708 --- [http-nio-8084-exec-1] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:37:13:874 DEBUG 45708 --- [http-nio-8084-exec-1] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978726906526736386(Long)
+15:37:13:877 DEBUG 45708 --- [http-nio-8084-exec-1] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:38:38:040 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=14741770661 HTTP/1.1
+15:38:38:040 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:38:38:040 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (7ms)
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:38:38 GMT
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"14741770661","name":"康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视","price":144600,"stock":9998,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp","category":"曲面电视","brand":"康佳","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:38:38:048 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (370-byte body)
+15:38:38:050 DEBUG 45708 --- [http-nio-8084-exec-3] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:38:38:051 DEBUG 45708 --- [http-nio-8084-exec-3] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1978727266851004418(Long), 144600(Integer), 3(Integer), 1(Long), 1(Integer)
+15:38:38:053 DEBUG 45708 --- [http-nio-8084-exec-3] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:38:38:054 DEBUG 45708 --- [http-nio-8084-exec-3] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:38:38:054 DEBUG 45708 --- [http-nio-8084-exec-3] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1978727266851004418(Long), 14741770661(Long), 1(Integer), 康佳（KONKA） LED49UC3 49英寸超薄曲面36核4K HDR人工智能电视(String), {}(String), 144600(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t16477/84/2032772431/400946/2887be91/5a912776N7e343ec3.jpg!q70.jpg.webp(String)
+15:38:38:057 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> DELETE http://cart-service/carts?ids=14741770661 HTTP/1.1
+15:38:38:057 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] user-info: 1
+15:38:38:057 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> END HTTP (0-byte body)
+15:38:38:067 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- HTTP/1.1 200  (9ms)
+15:38:38:067 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] connection: keep-alive
+15:38:38:067 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] content-length: 0
+15:38:38:067 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] date: Thu, 16 Oct 2025 07:38:38 GMT
+15:38:38:067 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] keep-alive: timeout=60
+15:38:38:067 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- END HTTP (0-byte body)
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> PUT http://item-service/items/stock/deduct HTTP/1.1
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Length: 34
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Type: application/json
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] user-info: 1
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] 
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] [{"itemId":"14741770661","num":1}]
+15:38:38:068 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> END HTTP (34-byte body)
+15:38:38:078 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- HTTP/1.1 200  (10ms)
+15:38:38:078 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] connection: keep-alive
+15:38:38:078 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] content-length: 0
+15:38:38:078 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] date: Thu, 16 Oct 2025 07:38:38 GMT
+15:38:38:078 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] keep-alive: timeout=60
+15:38:38:078 DEBUG 45708 --- [http-nio-8084-exec-3] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- END HTTP (0-byte body)
+15:38:38:117 DEBUG 45708 --- [http-nio-8084-exec-4] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:38:38:118 DEBUG 45708 --- [http-nio-8084-exec-4] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978727266851004418(Long)
+15:38:38:120 DEBUG 45708 --- [http-nio-8084-exec-4] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:38:39:587 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:38:39:588 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-10-16T15:38:39.586247200(LocalDateTime), 1978727267228504065(Long)
+15:38:39:590 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 0
+15:38:39:619 DEBUG 45708 --- [http-nio-8084-exec-5] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:38:39:619 DEBUG 45708 --- [http-nio-8084-exec-5] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978727266851004418(Long)
+15:38:39:622 DEBUG 45708 --- [http-nio-8084-exec-5] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:42:32:704 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> GET http://item-service/items?ids=8533120 HTTP/1.1
+15:42:32:704 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] user-info: 1
+15:42:32:704 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] ---> END HTTP (0-byte body)
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- HTTP/1.1 200  (7ms)
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] connection: keep-alive
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] content-type: application/json
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] date: Thu, 16 Oct 2025 07:42:32 GMT
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] keep-alive: timeout=60
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] transfer-encoding: chunked
+15:42:32:711 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] 
+15:42:32:712 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] [{"id":"8533120","name":"海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视","price":379500,"stock":9998,"image":"https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp","category":"曲面电视","brand":"海尔","spec":"{}","sold":0,"commentCount":0,"isAD":false,"status":1}]
+15:42:32:712 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#queryItemByIds] <--- END HTTP (383-byte body)
+15:42:32:713 DEBUG 45708 --- [http-nio-8084-exec-7] c.hmall.trade.mapper.OrderMapper.insert  : ==>  Preparing: INSERT INTO `order` ( id, total_fee, payment_type, user_id, status ) VALUES ( ?, ?, ?, ?, ? )
+15:42:32:713 DEBUG 45708 --- [http-nio-8084-exec-7] c.hmall.trade.mapper.OrderMapper.insert  : ==> Parameters: 1978728251103158273(Long), 379500(Integer), 3(Integer), 1(Long), 1(Integer)
+15:42:32:721 DEBUG 45708 --- [http-nio-8084-exec-7] c.hmall.trade.mapper.OrderMapper.insert  : <==    Updates: 1
+15:42:32:722 DEBUG 45708 --- [http-nio-8084-exec-7] c.h.t.mapper.OrderDetailMapper.insert    : ==>  Preparing: INSERT INTO order_detail ( order_id, item_id, num, name, spec, price, image ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+15:42:32:723 DEBUG 45708 --- [http-nio-8084-exec-7] c.h.t.mapper.OrderDetailMapper.insert    : ==> Parameters: 1978728251103158273(Long), 8533120(Long), 1(Integer), 海尔 （Haier ）LQ65H31 65英寸 4K曲面人工智能全面屏超高清LED液晶电视(String), {}(String), 379500(Integer), https://m.360buyimg.com/mobilecms/s720x720_jfs/t1/2851/14/13998/101463/5bd9723cE81b2c299/1bfdf2d1628648e4.jpg!q70.jpg.webp(String)
+15:42:32:726 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> DELETE http://cart-service/carts?ids=8533120 HTTP/1.1
+15:42:32:726 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] user-info: 1
+15:42:32:727 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] ---> END HTTP (0-byte body)
+15:42:32:739 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- HTTP/1.1 200  (12ms)
+15:42:32:739 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] connection: keep-alive
+15:42:32:739 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] content-length: 0
+15:42:32:739 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] date: Thu, 16 Oct 2025 07:42:32 GMT
+15:42:32:739 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] keep-alive: timeout=60
+15:42:32:739 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.CartClient          : [CartClient#removeByItemIds] <--- END HTTP (0-byte body)
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> PUT http://item-service/items/stock/deduct HTTP/1.1
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Length: 30
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] Content-Type: application/json
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] user-info: 1
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] 
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] [{"itemId":"8533120","num":1}]
+15:42:32:740 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] ---> END HTTP (30-byte body)
+15:42:32:749 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- HTTP/1.1 200  (8ms)
+15:42:32:749 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] connection: keep-alive
+15:42:32:749 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] content-length: 0
+15:42:32:749 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] date: Thu, 16 Oct 2025 07:42:32 GMT
+15:42:32:749 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] keep-alive: timeout=60
+15:42:32:749 DEBUG 45708 --- [http-nio-8084-exec-7] com.hmall.api.client.ItemClient          : [ItemClient#deductStock] <--- END HTTP (0-byte body)
+15:42:32:782 DEBUG 45708 --- [http-nio-8084-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:42:32:783 DEBUG 45708 --- [http-nio-8084-exec-8] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978728251103158273(Long)
+15:42:32:785 DEBUG 45708 --- [http-nio-8084-exec-8] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1
+15:42:35:928 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==>  Preparing: UPDATE `order` SET status=?, pay_time=? WHERE id=?
+15:42:35:929 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : ==> Parameters: 2(Integer), 2025-10-16T15:42:35.927280400(LocalDateTime), 1978728251103158273(Long)
+15:42:35:933 DEBUG 45708 --- [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] c.h.trade.mapper.OrderMapper.updateById  : <==    Updates: 1
+15:42:35:959 DEBUG 45708 --- [http-nio-8084-exec-9] c.h.trade.mapper.OrderMapper.selectById  : ==>  Preparing: SELECT id,total_fee,payment_type,user_id,status,create_time,pay_time,consign_time,end_time,close_time,comment_time,update_time FROM `order` WHERE id=?
+15:42:35:959 DEBUG 45708 --- [http-nio-8084-exec-9] c.h.trade.mapper.OrderMapper.selectById  : ==> Parameters: 1978728251103158273(Long)
+15:42:35:961 DEBUG 45708 --- [http-nio-8084-exec-9] c.h.trade.mapper.OrderMapper.selectById  : <==      Total: 1

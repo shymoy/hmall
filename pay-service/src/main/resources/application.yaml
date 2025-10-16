@@ -13,6 +13,12 @@ spring:
   cloud:
     nacos:
       server-addr: 192.168.100.10:8848
+  rabbitmq:
+    host: 192.168.100.10
+    port: 5672
+    username: hmall
+    password: 123
+    virtual-host: /hmall
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler

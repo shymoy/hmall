@@ -1,18 +1,206 @@
-00:02:56:317 DEBUG 25360 --- [http-nio-8082-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
-00:02:56:318 DEBUG 25360 --- [http-nio-8082-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
-00:02:56:319 DEBUG 25360 --- [http-nio-8082-exec-10] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
-00:03:11:381 DEBUG 25360 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
-00:03:11:384 DEBUG 25360 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
-00:03:11:386 DEBUG 25360 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
-00:03:16:006 DEBUG 25360 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
-00:03:16:006 DEBUG 25360 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
-00:03:16:009 DEBUG 25360 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
-00:03:25:099 DEBUG 25360 --- [http-nio-8082-exec-3] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
-00:03:25:099 DEBUG 25360 --- [http-nio-8082-exec-3] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
-00:03:25:123 DEBUG 25360 --- [http-nio-8082-exec-3] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
-00:03:25:127 DEBUG 25360 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
-00:03:25:127 DEBUG 25360 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
-00:03:25:130 DEBUG 25360 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
-00:04:00:232 DEBUG 25360 --- [http-nio-8082-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
-00:04:00:233 DEBUG 25360 --- [http-nio-8082-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 14741770661(Long)
-00:04:00:234 DEBUG 25360 --- [http-nio-8082-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+15:08:18:514  INFO 25516 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.28 on hachi with PID 25516 (D:\Study\ideaProject\JavaProject\hmall\item-service\target\classes started by 39424 in D:\Study\ideaProject\JavaProject\hmall)
+15:08:18:516 DEBUG 25516 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:08:18:516  INFO 25516 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+15:08:18:956 ERROR 25516 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Error processing condition on com.hmall.common.config.MyBatisConfig.mybatisPlusInterceptor
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForBeanMethod(ConfigurationClassBeanDefinitionReader.java:193) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:153) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:129) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:343) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:748) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.item.ItemApplication.main(ItemApplication.java:11) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.collectBeanNamesForType(OnBeanCondition.java:246) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:239) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getBeanNamesForType(OnBeanCondition.java:229) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchingBeans(OnBeanCondition.java:182) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.OnBeanCondition.getMatchOutcome(OnBeanCondition.java:157) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-2.7.12.jar:2.7.12]
+	... 17 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 33 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[na:na]
+	... 37 common frames omitted
+
+15:08:18:961  WARN 25516 --- [main] o.s.boot.SpringApplication               : Unable to close ApplicationContext
+
+java.lang.IllegalStateException: Failed to introspect Class [com.hmall.common.config.MqConfig] from ClassLoader [jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:485) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.doWithMethods(ReflectionUtils.java:361) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.util.ReflectionUtils.getUniqueDeclaredMethods(ReflectionUtils.java:418) ~[spring-core-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.lambda$getTypeForFactoryMethod$2(AbstractAutowireCapableBeanFactory.java:765) ~[spring-beans-5.3.27.jar:5.3.27]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705) ~[na:na]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryMethod(AbstractAutowireCapableBeanFactory.java:764) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:703) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:674) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1684) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doGetBeanNamesForType(DefaultListableBeanFactory.java:570) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:542) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:669) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:661) ~[spring-beans-5.3.27.jar:5.3.27]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1302) ~[spring-context-5.3.27.jar:5.3.27]
+	at org.springframework.boot.SpringApplication.getExitCodeFromMappedException(SpringApplication.java:864) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.getExitCodeFromException(SpringApplication.java:852) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleExitCode(SpringApplication.java:839) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:779) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
+	at com.hmall.item.ItemApplication.main(ItemApplication.java:11) ~[classes/:na]
+Caused by: java.lang.NoClassDefFoundError: org/springframework/amqp/support/converter/MessageConverter
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3166) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2309) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:467) ~[spring-core-5.3.27.jar:5.3.27]
+	... 21 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.amqp.support.converter.MessageConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:527) ~[na:na]
+	... 25 common frames omitted
+
+15:09:16:730  INFO 13452 --- [main] com.hmall.item.ItemApplication           : Starting ItemApplication using Java 11.0.28 on hachi with PID 13452 (D:\Study\ideaProject\JavaProject\hmall\item-service\target\classes started by 39424 in D:\Study\ideaProject\JavaProject\hmall)
+15:09:16:730 DEBUG 13452 --- [main] com.hmall.item.ItemApplication           : Running with Spring Boot v2.7.12, Spring v5.3.27
+15:09:16:731  INFO 13452 --- [main] com.hmall.item.ItemApplication           : The following 1 profile is active: "local"
+15:09:17:224  INFO 13452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+15:09:17:225  INFO 13452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:09:17:238  INFO 13452 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+15:09:17:340  INFO 13452 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=d6630725-3127-3c77-8b45-4eaaf318206f
+15:09:17:532  INFO 13452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+15:09:17:537  INFO 13452 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+15:09:17:538  INFO 13452 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
+15:09:17:598  INFO 13452 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+15:09:17:598  INFO 13452 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 841 ms
+15:09:20:336  INFO 13452 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+15:09:21:395  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc
+15:09:21:420  INFO 13452 --- [main] org.reflections.Reflections              : Reflections took 14 ms to scan 1 urls, producing 3 keys and 6 values 
+15:09:21:435  INFO 13452 --- [main] org.reflections.Reflections              : Reflections took 8 ms to scan 1 urls, producing 4 keys and 9 values 
+15:09:21:444  INFO 13452 --- [main] org.reflections.Reflections              : Reflections took 7 ms to scan 1 urls, producing 3 keys and 10 values 
+15:09:21:446  WARN 13452 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:09:21:452  INFO 13452 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 5 values 
+15:09:21:460  INFO 13452 --- [main] org.reflections.Reflections              : Reflections took 6 ms to scan 1 urls, producing 1 keys and 7 values 
+15:09:21:466  INFO 13452 --- [main] org.reflections.Reflections              : Reflections took 5 ms to scan 1 urls, producing 2 keys and 8 values 
+15:09:21:469  WARN 13452 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
+15:09:21:469  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] RpcClient init label, labels = {module=naming, source=sdk}
+15:09:21:470  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+15:09:21:470  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+15:09:21:470  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+15:09:21:471  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Try to connect to server on start up, server: {serverIp = '192.168.100.10', server main port = 8848}
+15:09:23:583  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Success to connect to server [192.168.100.10:8848] on start up, connectionId = 1760598563542_192.168.100.1_51698
+15:09:23:583  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+15:09:23:583  INFO 13452 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Notify connected event to listeners.
+15:09:23:583  INFO 13452 --- [main] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$1153/0x000000084070a840
+15:09:23:638  INFO 13452 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+15:09:23:652  INFO 13452 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP item-service 192.168.194.1:8082 register finished
+15:09:24:119  INFO 13452 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Receive server push request, request = NotifySubscriberRequest, requestId = 7
+15:09:24:122  INFO 13452 --- [nacos-grpc-client-executor-9] com.alibaba.nacos.common.remote.client   : [8f9c8d42-0cfb-47dc-9da0-69a8ca1021cc] Ack server push request, request = NotifySubscriberRequest, requestId = 7
+15:09:24:681  INFO 13452 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+15:09:24:683  INFO 13452 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+15:09:24:704  INFO 13452 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+15:09:24:813  INFO 13452 --- [main] com.hmall.item.ItemApplication           : Started ItemApplication in 9.358 seconds (JVM running for 10.278)
+15:17:00:282  INFO 13452 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:17:00:282  INFO 13452 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+15:17:00:283  INFO 13452 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+15:17:00:329  INFO 13452 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+15:17:00:455  INFO 13452 --- [http-nio-8082-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+15:17:00:458 DEBUG 13452 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+15:17:00:471 DEBUG 13452 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 14741770661(Long)
+15:17:00:493 DEBUG 13452 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+15:17:33:696 DEBUG 13452 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? , ? )
+15:17:33:696 DEBUG 13452 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long), 14741770661(Long)
+15:17:33:700 DEBUG 13452 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 2
+15:17:33:844  WARN 13452 --- [http-nio-8082-exec-3] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3655b1f3] Transaction not enabled
+15:17:33:844 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+15:17:33:844 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 14741770661(Long)
+15:17:33:845 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 8533120(Long)
+15:22:14:544 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+15:22:14:545 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+15:22:14:663 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+15:22:14:669 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+15:22:14:669 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+15:22:14:693 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+15:22:17:755 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:22:17:755 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100001511821(Long)
+15:22:17:757 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:22:23:192 DEBUG 13452 --- [http-nio-8082-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:22:23:192 DEBUG 13452 --- [http-nio-8082-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 100001511821(Long)
+15:22:23:196 DEBUG 13452 --- [http-nio-8082-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:22:23:228  WARN 13452 --- [http-nio-8082-exec-9] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f84f423] Transaction not enabled
+15:22:23:228 DEBUG 13452 --- [http-nio-8082-exec-9] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+15:22:23:231 DEBUG 13452 --- [http-nio-8082-exec-9] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 100001511821(Long)
+15:37:08:125 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+15:37:08:126 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+15:37:08:153 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+15:37:08:155 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+15:37:08:156 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+15:37:08:161 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+15:37:09:613 DEBUG 13452 --- [http-nio-8082-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:37:09:613 DEBUG 13452 --- [http-nio-8082-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 40305713537(Long)
+15:37:09:615 DEBUG 13452 --- [http-nio-8082-exec-4] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:37:12:136 DEBUG 13452 --- [http-nio-8082-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:37:12:136 DEBUG 13452 --- [http-nio-8082-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 40305713537(Long)
+15:37:12:138 DEBUG 13452 --- [http-nio-8082-exec-5] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:37:12:166  WARN 13452 --- [http-nio-8082-exec-7] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7137dfa3] Transaction not enabled
+15:37:12:166 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+15:37:12:166 DEBUG 13452 --- [http-nio-8082-exec-7] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 40305713537(Long)
+15:38:35:435 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+15:38:35:435 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+15:38:35:453 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+15:38:35:454 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+15:38:35:455 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+15:38:35:458 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+15:38:36:434 DEBUG 13452 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:38:36:434 DEBUG 13452 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+15:38:36:436 DEBUG 13452 --- [http-nio-8082-exec-2] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:38:38:045 DEBUG 13452 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:38:38:045 DEBUG 13452 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 14741770661(Long)
+15:38:38:047 DEBUG 13452 --- [http-nio-8082-exec-1] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:38:38:070  WARN 13452 --- [http-nio-8082-exec-3] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5725d578] Transaction not enabled
+15:38:38:070 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+15:38:38:070 DEBUG 13452 --- [http-nio-8082-exec-3] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 14741770661(Long)
+15:42:30:218 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.i.m.ItemMapper.selectPage_mpCount    : ==>  Preparing: SELECT COUNT(*) FROM item WHERE (status = ?)
+15:42:30:218 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.i.m.ItemMapper.selectPage_mpCount    : ==> Parameters: 1(Integer)
+15:42:30:247 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.i.m.ItemMapper.selectPage_mpCount    : <==      Total: 1
+15:42:30:249 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.item.mapper.ItemMapper.selectPage    : ==>  Preparing: SELECT id, name, price, stock, image, category, brand, spec, sold, comment_count, isAD, status, create_time, update_time, creater, updater FROM item WHERE (status = ?) ORDER BY update_time DESC LIMIT ?
+15:42:30:249 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.item.mapper.ItemMapper.selectPage    : ==> Parameters: 1(Integer), 20(Long)
+15:42:30:255 DEBUG 13452 --- [http-nio-8082-exec-6] c.h.item.mapper.ItemMapper.selectPage    : <==      Total: 20
+15:42:31:272 DEBUG 13452 --- [http-nio-8082-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:42:31:272 DEBUG 13452 --- [http-nio-8082-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long)
+15:42:31:275 DEBUG 13452 --- [http-nio-8082-exec-8] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:42:32:709 DEBUG 13452 --- [http-nio-8082-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==>  Preparing: SELECT id,name,price,stock,image,category,brand,spec,sold,comment_count,isAD,status,create_time,update_time,creater,updater FROM item WHERE id IN ( ? )
+15:42:32:709 DEBUG 13452 --- [http-nio-8082-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : ==> Parameters: 8533120(Long)
+15:42:32:710 DEBUG 13452 --- [http-nio-8082-exec-9] c.h.i.mapper.ItemMapper.selectBatchIds   : <==      Total: 1
+15:42:32:742  WARN 13452 --- [http-nio-8082-exec-10] c.h.item.service.impl.ItemServiceImpl    : SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5509dc2e] Transaction not enabled
+15:42:32:742 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.item.mapper.ItemMapper.updateStock   : ==>  Preparing: UPDATE item SET stock = stock - ? WHERE id = ?
+15:42:32:742 DEBUG 13452 --- [http-nio-8082-exec-10] c.h.item.mapper.ItemMapper.updateStock   : ==> Parameters: 1(Integer), 8533120(Long)
